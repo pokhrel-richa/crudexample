@@ -34,14 +34,14 @@ public class ClientController {
     public List<ClientRequest> findAllClients(){
         return service.getClients();
     }
-    @GetMapping("clientid/{id}")
-    public ClientRequest findClientById(@PathVariable String id){
-        return service.getClientById(Long.parseLong(id));
-    }
-    @GetMapping("clientname/{name}")
-    public Client findClientByName(@PathVariable String name){
-        return service.getClientByName(name);
-    }
+//     @GetMapping("clientid/{id}")
+//     public ClientRequest findClientById(@PathVariable String id){
+//         return service.getClientById(Long.parseLong(id));
+//     }
+//     @GetMapping("clientname/{name}")
+//     public Client findClientByName(@PathVariable String name){
+//         return service.getClientByName(name);
+//     }
     @PutMapping("/update/{id}")
     public ClientRequest updateClient(@RequestBody ClientRequest client, @PathVariable String id){
         return service.updateClient(client, Long.parseLong(id));
